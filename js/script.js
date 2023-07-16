@@ -1,8 +1,14 @@
 var button = document.querySelector(".show-cat");
+var cat = document.querySelector(".cat"); 
+
 button.addEventListener("click", function () {
-button.innerText = "it's working."
+if (cat.classList.contains("show")) {
+cat.classList.remove("show");
+button.innerText = "Wait, come back!";
+button.classList.add("disappear");
+} else {
+    cat.classList.add("show");
+    button.innerText = "Shoo, cat!";
+    button.classList.remove("disappear");
+}
 });
-//console.log(button);
-var cat = document.querySelector(".cat");
-cat.classList.add("show");
-//console.log(cat);
